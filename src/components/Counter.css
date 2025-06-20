@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 0.5rem 0;
+
+}
+
+.increment-button,
+.decrement-button,
+.increase-by-5-button,
+.toggle-button,
+.reset-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 1rem 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+}
+
+.increment-button {
+    background-color: #28a745;
+}
+
+.decrement-button {
+    background-color: #dc3545;
+}
+
+.reset-button {
+    background-color: #007bff;
+}
+
+.increase-by-5-button {
+    background-color: #17a2b8;
+}
+
+.toggle-button {
+    background-color: #ffc107;
+}
+
+.increment-button:hover {
+    background-color: #218838;
+}
+
+.decrement-button:hover {
+    background-color: #c82333;
+}
+
+.reset-button:hover {
+    background-color: #0069d9;
+}
+
+.increase-by-5-button:hover {
+    background-color: #138496;
+}
+
+.toggle-button:hover {
+    background-color: #e0a800;
+}
