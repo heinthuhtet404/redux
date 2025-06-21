@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Counter from './components/Counter'
+import Welcome from './components/Welcome'
+import Nav from './components/Nav'
+import { useSelector } from 'react-redux'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const isToggled = useSelector((state) => state.auth.isToggled);
 
   return (
     <>
-      <Counter />
+      <Nav/>
+      {
+        !isToggled && <Welcome/>
+      }
+      {
+        isToggled && <Counter/>
+      }
     </>
   )
 }

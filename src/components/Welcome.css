@@ -1,0 +1,14 @@
+.login-btn {
+    padding: 1rem;
+    font-size: 1rem;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    background-color: #8f7a7a;
+    margin: 20px;
+}

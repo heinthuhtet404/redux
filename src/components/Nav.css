@@ -1,0 +1,35 @@
+/* Navigation Bar Styles */
+nav {
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    list-style-type: none;
+}
+
+li{
+    
+}
+
+button{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* margin: 1rem 0.5rem; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: center;
+    background-color: #ba7474;
+}

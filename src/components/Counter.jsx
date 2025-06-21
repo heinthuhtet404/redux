@@ -1,42 +1,24 @@
-import React, { useState } from 'react'
 import './Counter.css'
 import { useSelector , useDispatch } from 'react-redux'
+import { counterActions } from '../store/counterReducer';
 
-const Counter = () => {
-    const counter = useSelector((state) => state.counter);
-    const isToggled = useSelector((state) => state.isToggled); // useSelector is a hook that allows us to extract data from the Redux store state
+const Counter = () => { 
+    const counter = useSelector((state) => state.counter.counter);
+    const isToggled = useSelector((state) => state.counter.isToggled); // useSelector is a hook that allows us to extract data from the Redux store state
     const dispatch = useDispatch(); // useDispatch is a hook that gives us access to the dispatch function from the Redux store
 
     const incrementHandle = () => {
-        if(isToggled) {
-            dispatch({ type: 'INCREMENT' });
-        }else {
-            alert("Counter is hidden, please toggle to show it before incrementing");
-        }
+            dispatch(counterActions.increase());
     }
     const decrementHandle = () => {
-        if (counter > 0 && isToggled) {
-            dispatch({ type: 'DECREMENT' });
-        }else {
-            alert("Counter cannot be decremented below 0");
-        }
-    }
-    const resetHandle = () => {
-        if (isToggled) {
-            dispatch({ type: 'RESET' });
-        }else {
-            alert("Counter is hidden, please toggle to show it before resetting");
-        }
+        dispatch(counterActions.decrease());
     }
     const IncreaseByfive = () => {
-        if (isToggled) {
-            dispatch({ type: 'INCREASE_BY_FIVE' });
-        }else {
-            alert("Counter is hidden, please toggle to show it before increasing by 5");
-        }
+        dispatch(counterActions.increaseBy5(5));
     }
+
     const toggleHandle = () => {
-        dispatch({ type: 'TOGGLE' });
+        dispatch(counterActions.toggle());
     }
 
     return (
