@@ -4,9 +4,10 @@ import Counter from './components/Counter'
 import Welcome from './components/Welcome'
 import Nav from './components/Nav'
 import { useSelector } from 'react-redux'
+import Todo from './components/Todo'
 
 function App() {
-  const isToggled = useSelector((state) => state.auth.isToggled);
+  const isToggled = useSelector((state) => state.auth.isLogin);
 
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
       {
         isToggled && <Counter/>
       }
+      <Todo/>
     </>
   )
 }

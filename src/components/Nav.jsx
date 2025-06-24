@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { authActions } from '../store/authReducer';
 
 const Nav = () => {
-    const isToggled = useSelector((state) => state.auth.isToggled);
+    const isToggled = useSelector((state) => state.auth.isLogin);
     const dispatch = useDispatch();
 
     const logoutHandler = () => {
